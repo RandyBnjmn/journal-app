@@ -14,10 +14,8 @@
 </template>
 
 <script>
-const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
-const days   = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado']
 
-    import getDayMonthYear from '../helper/getDayMonthYear'
+import getDayMonthYear from '../helper/getDayMonthYear'
 export default {
     
 
@@ -35,14 +33,16 @@ export default {
             return this.entry.text.length > 120 ? this.entry.text.substring(0,120)+'...' : this.entry.text
         },
         day(){
-            const {day} = getDayMonthYear(entry.date)
+            const {day} = getDayMonthYear(this.entry.date)
             return day
         },
         month(){
-            const {month} = getDayMonthYear(entry.date)
+            const {month} = getDayMonthYear(this.entry.date)
+            return month
         },
         year(){
-            const yearDay = getDayMonthYear(entry.date)
+            const {year} = getDayMonthYear(this.entry.date)
+            return year
         },
     },
   
