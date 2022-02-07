@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <button class="btn btn-primary">Click</button>
-  </div>
+ <h1>Home</h1>
 </template>
 
 

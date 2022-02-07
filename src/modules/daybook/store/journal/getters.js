@@ -9,7 +9,6 @@ export const getEntriesByTerm = (state) => (term = '') => {
 }
 
 export const getEntriesById = (state) => (id='')=> {
-
     const entry =  state.entries.find(entry => entry.id===id)
     if(!entry) return
     return {...entry}
